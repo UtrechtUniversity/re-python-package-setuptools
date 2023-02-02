@@ -1,0 +1,48 @@
+# This workflow contains actions for 
+# - installing Python dependencies 
+# - running tests 
+# - linting with flake8, pylint
+# - type checking
+# 
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: Python package
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.8, 3.9, "3.10"]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install flake8 pylint pytest mypy types-tqdm
+#        python -m pip install .
+#    - name: Lint with flake8
+#      run: |
+#        flake8 <package-name>
+#    - name: Lint with pylint
+#      run: |
+#        pylint <package-name> 
+#    - name: Test with pytest
+#      run: |
+#        pytest tests
+#    - name: Test with MyPy
+#      run: |
+#        mypy <package-name>
