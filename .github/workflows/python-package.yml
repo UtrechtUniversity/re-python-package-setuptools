@@ -16,6 +16,7 @@ on:
   pull_request:
     branches: [ main ]
 
+# Replace package-name with your package name
 env:
   PACKAGE_NAME: package-name
 
