@@ -27,3 +27,9 @@ test = ["pytest", "mypy"]
 
 [tool.flake8]
 max-line-length = 99
+
+[tool.setuptools]
+packages = ["package-name"]
+
+[tool.setuptools_scm]
+write_to = "package-name/_version.py"
