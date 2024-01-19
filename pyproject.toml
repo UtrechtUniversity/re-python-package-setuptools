@@ -25,5 +25,9 @@ dependencies = [
 lint = ["flake8"]
 test = ["pytest", "mypy"]
 
+[tool.setuptools]
+packages = ["package-name"]
+
+
 [tool.flake8]
 max-line-length = 99
