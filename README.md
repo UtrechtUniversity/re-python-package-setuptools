@@ -28,13 +28,13 @@ If needed, most of these tools can be removed by simply removing the GitHub acti
 Click `Use this template` at the top of this page to create a new repository using this template
 
 ### Step 2: Change the name of your package in pyproject.toml
-- Change the name of the folder `package-name` to the name of your package
-- Open `pyproject.toml` and change `package-name` to the name of your package
+- Change the name of the folder `packagename` to the name of your package
+- Open `pyproject.toml` and change `packagename` to the name of your package
 - Also change the authors and optionally any other items that you want to change
 
 ### Step 3: Change GitHub Actions workflow
 - Open `.github/workflows/python-package.yml`
-- Change `package-name` to the name of your package (line 21)
+- Change `packagename` to the name of your package (line 21)
 - Many actions are commented out, uncomment them when you want to start using them.
 
 ### Step 4: Replace this README file with your README
