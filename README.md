@@ -49,3 +49,24 @@ Click `Use this template` at the top of this page to create a new repository usi
 
 ### Step 7: Publising on Pypi (optional/later)
 For publishing the package on Pypi you need to create [API tokens](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries).
+
+## Next Steps
+
+Now that you have succesfully created a package, there are some further steps to consider.
+
+### Tagging your commits
+
+When your library grows, you might want to give some commits (on main) a more human-readable tag, such as 1.2.0. To do this, do the following:
+
+```bash
+git checkout main && git pull
+git tag -a "v1.2.0" -m "Version 1.2.0"
+git push --tags  # upload the tags to GitHub
+```
+
+### Publishing on Pypi 
+For publishing the package on Pypi you need to create [API tokens](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries).
+
+If you put this token in GitHub secrets with the name `PYPI_API_TOKEN`, then you can automatically generate a new release on PyPi by creating a release on GitHub. You have to select the tag that was created in the previous step.
+
+Note however that your first release on PyPi has to be done manually and can't be done using this method.
