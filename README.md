@@ -1,6 +1,6 @@
-# re-python-package
+# Python packaging template with Setuptools
 
-This template repository is created by the [UU Research Engineering team](https://utrechtuniversity.github.io/research-engineering/) and is aimed to provide a simple project template for python package development.
+This template repository is created by the [UU Research Engineering team](https://utrechtuniversity.github.io/research-engineering/) and is aimed to provide a simple project template for python package development. This template uses [Setuptools](https://setuptools.pypa.io/en/latest/userguide/quickstart.html) as the packaging toolkit, there is another [template](https://github.com/UtrechtUniversity/re-python-package-poetry) that is very similar that uses [Poetry](https://python-poetry.org/).
 
 The template includes:
 - Project directory structure
